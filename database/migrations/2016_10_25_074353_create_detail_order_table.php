@@ -12,7 +12,7 @@ class CreateDetailOrderTable extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('detail_orders', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_menu')->unsigned();
             $table->foreign('id_menu')
