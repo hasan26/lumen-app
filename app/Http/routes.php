@@ -37,8 +37,9 @@ $app->group(['prefix' => 'api'], function () use ($app) {
 	});
 
 	$app->get('meja','App\Http\Controllers\MejaController@index');
-
-	$app->get('user/profile', function () {
-		return 'hasan';
-	});
+	$app->get('menu','App\Http\Controllers\MenuController@index');
+	$app->get('menu/food','App\Http\Controllers\MenuController@food');
+	$app->get('menu/drink','App\Http\Controllers\MenuController@drink');
+    $app->post('order','App\Http\Controllers\OrderController@newOrder');
+    
 });
