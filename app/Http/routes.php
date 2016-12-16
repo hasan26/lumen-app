@@ -41,5 +41,6 @@ $app->group(['prefix' => 'api'], function () use ($app) {
 	$app->get('menu/food','App\Http\Controllers\MenuController@food');
 	$app->get('menu/drink','App\Http\Controllers\MenuController@drink');
     $app->post('order','App\Http\Controllers\OrderController@newOrder');
+	$app->get('order','App\Http\Controllers\OrderController@index');
     
 });

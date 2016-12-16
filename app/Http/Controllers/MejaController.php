@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
  
 use App\Meja;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class MejaController extends Controller{
 
