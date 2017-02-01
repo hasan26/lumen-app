@@ -24,7 +24,7 @@ class MenuController extends Controller{
 
     public function find($id){
         $detail_menu = Menu::where("id",$id)->get();
-        return response()->json($id);
+        return response()->json($detail_menu);
     }
 
 }
