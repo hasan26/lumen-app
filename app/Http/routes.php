@@ -25,7 +25,7 @@ $app->group(['prefix' => 'api'], function () use ($app) {
 			$data = $request->all();
 		}
 
-		if( $request->json()->get('username') == "hasan"){
+		if( $request->json()->get('username') == "employed"){
 			$response = array('status' => true, 'message'=>'succes');
 		}else{
 			$response = array('status' => false, 'message'=>'failed');
@@ -42,5 +42,8 @@ $app->group(['prefix' => 'api'], function () use ($app) {
 	$app->get('menu/drink','App\Http\Controllers\MenuController@drink');
     $app->post('order','App\Http\Controllers\OrderController@newOrder');
 	$app->get('order','App\Http\Controllers\OrderController@index');
+	$app->get('menu/{id}', [
+    	'uses' => 'App\Http\Controllers\MenuController@find'
+	]);
     
 });
